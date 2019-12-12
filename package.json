@@ -10,7 +10,8 @@
     "build": "parcel build ./src/index.html"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "posthtml-include": "^1.3.2"
   },
   "dependencies": {
     "sass": "^1.23.7"

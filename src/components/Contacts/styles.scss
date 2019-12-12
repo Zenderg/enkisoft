@@ -1,0 +1,37 @@
+.contacts {
+    position: relative;
+    padding: 0;
+    color: $white;
+    letter-spacing: 0.065em;
+
+    .layer {
+        background-color: rgba($accent, 0.7);
+        left: 0;
+        height: 100%;
+        width: 50%;
+        padding-left: 100px;
+        padding-top: 260px;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 9999;
+        .title {
+            font-weight: 600;
+            font-size: 72px;
+            margin-bottom: 60px;
+        }
+        .contacts-list {
+            display: flex;
+            flex-direction: column;
+            .contact-block {
+                margin-bottom: 48px;
+                .block-title {
+                    color: $primary;
+                    font-size: 18px;
+                }
+                .block-text {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

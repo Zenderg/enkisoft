@@ -1,0 +1,97 @@
+section.carousel {
+  background-color: $accent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .blocks-container{
+    display: flex;
+    min-width: 100%;
+    flex: 1;
+    overflow: hidden;
+
+    #carousel-offset{
+      transition-duration: 0.5s;
+    }
+    .block{
+      min-width: 100%;
+      position: relative;
+      height: 100%;
+      opacity: 0;
+      transition-duration: 0.5s;
+      &.active{
+        opacity: 1;
+      }
+      .carousel-img {
+        position: absolute;
+        right: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 120px;
+        width: 50%;
+        height: 100%;
+        z-index: 100;
+        max-height: 600px;
+      }
+      h2.carousel-header {
+        color: white;
+        font-size: $font-size-header;
+      }
+      p.carousel-text {
+        min-height: 160px;
+        letter-spacing: 0.085em;
+        max-width: 40%;
+        color: white;
+        font-size: $font-size-text;
+      }
+    }
+  }
+
+  .arrows {
+    //position: absolute;
+    margin-bottom: 60px;
+    :first-child{
+      background-image: url("./components/Carousel/assets/arrow_left.svg");
+    }
+    :nth-child(2){
+      background-image: url("./components/Carousel/assets/arrow_right.svg");
+    }
+    button.arrow {
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 335px;
+      height: 30px;
+      color: white;
+      background-color: transparent;
+      margin: 4px;
+      cursor: pointer;
+
+      &:focus{
+        outline: 0;
+      }
+
+    }
+  }
+  .slider {
+    display: flex;
+    align-items: flex-end;
+    button.indicator {
+      flex: 1;
+      margin: 4px;
+      height: 8px;
+      color: white;
+      opacity: 0.5;
+      border-radius: 2px;
+      cursor: pointer;
+      transition-duration: 0.5s;
+
+
+      &:focus{
+        outline: 0;
+      }
+      &.active{
+        height: 16px;
+        opacity: 1;
+      }
+    }
+  }
+}
