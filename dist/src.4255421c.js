@@ -4,7 +4,9 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 module.exports="/placemark.e2af7c08.svg";
 },{}],"QGuT":[function(require,module,exports) {
 "use strict";var e=a(require("/components/Contacts/assets/placemark.svg"));function a(e){return e&&e.__esModule?e:{default:e}}function t(){var a=new ymaps.Map("contacts-map",{center:[51.671929,39.194751],zoom:18}),t=new ymaps.Placemark([51.671753,39.196515],{},{iconLayout:"default#image",iconImageHref:e.default,iconImageSize:[50,50]});a.geoObjects.add(t)}ymaps.ready(t);
-},{"/components/Contacts/assets/placemark.svg":"wmZi"}],"Focm":[function(require,module,exports) {
-"use strict";var r=require("./components/Carousel/script");require("./components/Contacts/script"),(0,r.slider)();
-},{"./components/Carousel/script":"Zuv8","./components/Contacts/script":"QGuT"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.83167132.js.map
+},{"/components/Contacts/assets/placemark.svg":"wmZi"}],"OPoO":[function(require,module,exports) {
+window.onload=function(){var t=document.querySelectorAll(".menu-link");t.forEach(function(t){t.onclick=function(){var n=t.getAttribute("data-href");document.querySelector(".".concat(n)).scrollIntoView({behavior:"smooth"})}}),document.onscroll=function(n){var e=window.scrollY;t.forEach(function(t){return t.classList.remove("link-active")}),function n(c){var o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,i=c.getAttribute("data-href"),r=document.querySelector(".".concat(i)).getBoundingClientRect().y;if(e-r>=200){var a=o+1;return t[a]?n(t[a],a):t[o].classList.add("link-active")}return 0===o?c.classList.add("link-active"):t[o-1].classList.add("link-active")}(t[0])}};
+},{}],"Focm":[function(require,module,exports) {
+"use strict";var e=require("./components/Carousel/script");require("./components/Contacts/script"),require("./components/Header/script"),(0,e.slider)();
+},{"./components/Carousel/script":"Zuv8","./components/Contacts/script":"QGuT","./components/Header/script":"OPoO"}]},{},["Focm"], null)
+//# sourceMappingURL=/src.4255421c.js.map

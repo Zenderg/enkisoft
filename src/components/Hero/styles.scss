@@ -1,18 +1,20 @@
 .hero {
     background-image: url("./components/Hero/assets/bg.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     .content {
         color: $white;
         margin-top: 80px;
         .title {
-            width: 1200px;
+            max-width: 1200px;
             margin-bottom: 60px;
             font-size: 72px;
             font-weight: 600;
         }
         .text {
             font-size: 24px;
-            width: 924px;
+            max-width: 924px;
             letter-spacing: 0.085em;
             font-weight: 300;
         }

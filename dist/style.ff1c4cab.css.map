@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles\\style.scss"],"names":[],"mappings":"AAAA;EACE;EACA","file":"style.ff1c4cab.css","sourceRoot":"..\\src","sourcesContent":["header{\r\n  width: 400px;\r\n  background-color: red;\r\n}\r\n"]}
