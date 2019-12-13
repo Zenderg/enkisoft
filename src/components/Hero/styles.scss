@@ -77,3 +77,17 @@
         }
     }
 }
+
+@media (max-width: 330px) {
+    .hero{
+        .content {
+            margin-top: 70px;
+            .title {
+                font-size: 18px;
+            }
+            .text {
+                font-size: 13px;
+            }
+        }
+    }
+}
