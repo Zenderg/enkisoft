@@ -13,10 +13,68 @@
             font-weight: 600;
         }
         .text {
-            font-size: 24px;
+            font-size: $font-size-text;
             max-width: 924px;
             letter-spacing: 0.085em;
             font-weight: 300;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero{
+        .content {
+            .title {
+                font-size: 62px;
+                margin-bottom: 50px;
+            }
+            .text {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 802px) {
+    .hero{
+        .content {
+            .title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+            .text {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .hero{
+        .content {
+            margin-top: 150px;
+            .title {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            .text {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .hero{
+        .content {
+            margin-top: 100px;
+            .title {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .text {
+                font-size: 14px;
+            }
         }
     }
 }

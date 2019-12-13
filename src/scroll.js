@@ -1,9 +1,10 @@
 window.addEventListener("load", () => {
     let blockScroll = false;
+    const mobileWidth = 1200;
     const sections = document.querySelectorAll("section");
 
     const scrollInSection = (delta) => {
-        if (blockScroll) return false;
+        if (blockScroll || window.innerWidth < mobileWidth) return false;
 
         const yArr = [];
 
