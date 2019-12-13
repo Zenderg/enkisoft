@@ -6,7 +6,8 @@ window.addEventListener("load", () => {
     function init(){
         var myMap = new ymaps.Map("contacts-map", {
             center: [51.671929, 39.194751],
-            zoom: 18
+            zoom: 18,
+            controls: [],
         });
 
         var placemark = new ymaps.Placemark([51.671753, 39.196515], {}, {
@@ -17,6 +18,7 @@ window.addEventListener("load", () => {
 
 
         myMap.geoObjects.add(placemark);
+
     }
 
 });
