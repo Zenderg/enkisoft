@@ -100,16 +100,18 @@ section.carousel {
 
 @media (max-width: 521px) {
   section.carousel {
+    padding-top: 70px;
     .blocks-container {
       .block {
         display: flex;
         flex-direction: column;
         .carousel-img {
           flex: 1;
-          width: 100%;
           position: relative;
-          height: 100px;
-          margin: 0;
+          width: 80%;
+          margin: 0 10%;
+          bottom: 0;
+          background-position: bottom;
         }
         h2.carousel-header {
           font-size: 4vh;
@@ -123,8 +125,11 @@ section.carousel {
     .arrows {
       width: 300px;
       margin-bottom: 20px;
+      display: flex;
+      margin: auto;
       .arrow{
         max-width: 280px;
+        margin: 16px;
       }
       button#carousel-button-prev.arrow {
         background-position: left;
@@ -134,6 +139,7 @@ section.carousel {
       }
     }
     .slider {
+      margin: 0 50px;
       button.indicator.active {}
       button.indicator {}
       button.indicator {}

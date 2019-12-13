@@ -39,8 +39,7 @@ export function slider() {
             slide(-1);
         }
     });
-
     document.getElementById("carousel-button-prev").addEventListener("click", () => slide(-1));
-    document.getElementById("carousel-button-next").addEventListener("click", () => slide(+1));
+    document.getElementById("carousel-button-next").addEventListener("click", () => slide( 1));
 
 }
