@@ -22,3 +22,10 @@ button{
     padding: 0;
     margin: 0;
 }
+
+
+@media (max-width: 500px) {
+    section{
+        padding: 16px;
+    }
+}

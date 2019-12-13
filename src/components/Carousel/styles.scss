@@ -74,6 +74,7 @@ section.carousel {
   .slider {
     display: flex;
     align-items: flex-end;
+    height: 24px;
     button.indicator {
       flex: 1;
       margin: 4px;
@@ -92,6 +93,52 @@ section.carousel {
         height: 16px;
         opacity: 1;
       }
+    }
+  }
+}
+
+
+@media (max-width: 521px) {
+  section.carousel {
+    .blocks-container {
+      .block {
+        display: flex;
+        flex-direction: column;
+        .carousel-img {
+          flex: 1;
+          width: 100%;
+          position: relative;
+          height: 100px;
+          margin: 0;
+        }
+        h2.carousel-header {
+          font-size: 4vh;
+        }
+        p.carousel-text {
+          font-size: 2vh;
+          min-width: 100%;
+        }
+      }
+    }
+    .arrows {
+      width: 300px;
+      margin-bottom: 20px;
+      .arrow{
+        max-width: 280px;
+      }
+      button#carousel-button-prev.arrow {
+        background-position: left;
+      }
+      button#carousel-button-next.arrow {
+        background-position: right;
+      }
+    }
+    .slider {
+      button.indicator.active {}
+      button.indicator {}
+      button.indicator {}
+      button.indicator {}
+      button.indicator {}
     }
   }
 }
