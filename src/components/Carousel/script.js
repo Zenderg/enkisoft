@@ -22,9 +22,7 @@ export function slider() {
     };
 
     const slide = (direction) => {
-
         const newIndex =  (currentIndex + direction) % blockCount;
-        console.log(newIndex);
         currentIndex = (newIndex < 0) ? blockCount-1 : newIndex;
         changeCurrentIndex(currentIndex);
     };
