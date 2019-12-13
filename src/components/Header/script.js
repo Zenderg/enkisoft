@@ -32,4 +32,11 @@ window.addEventListener("load", () => {
 
         iter(links[0]);
     });
+
+    const burger = document.querySelector(".burger");
+
+    burger.addEventListener("click", () => {
+        if (burger.classList.contains("active")) return burger.classList.remove("active");
+        else burger.classList.add("active");
+    });
 });
