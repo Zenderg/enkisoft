@@ -1,14 +1,14 @@
-window.onload = () => {
+window.addEventListener("load", () => {
     const links = document.querySelectorAll(".menu-link");
 
     links.forEach(item => {
-        item.onclick = () => {
+        item.addEventListener("click", () => {
             const href = item.getAttribute("data-href");
             document.querySelector(`.${ href }`).scrollIntoView({ behavior: "smooth" });
-        }
+        });
     });
 
-    document.onscroll = (e) => {
+    document.addEventListener("scroll", (e) => {
         const scrollValue = window.scrollY;
 
         const iter = (item, index = 0) => {
@@ -31,5 +31,5 @@ window.onload = () => {
         links.forEach(link => link.classList.remove("link-active"));
 
         iter(links[0]);
-    };
-};
+    });
+});
