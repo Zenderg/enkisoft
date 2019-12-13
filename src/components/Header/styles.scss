@@ -58,3 +58,43 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .header {
+        .logo-block {
+            margin-right: auto;
+            .logo-main {
+                .logo {
+                    background-image: url("./components/Header/assets/logo.svg");
+                    height: 50px;
+                    width: 50px;
+                    background-repeat: no-repeat;
+                }
+                .name {
+                    font-size: 24px;
+                    margin-left: 10px;
+                }
+            }
+            .logo-desc {
+                font-size: 16px;
+                letter-spacing: 0.06em;
+                margin-top: 6px;
+                font-weight: 300;
+            }
+        }
+        .menu {
+            .menu-link {
+                font-size: 14px;
+                &:nth-child(even) {
+                    margin: 0 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 10px 16px;
+    }
+}
