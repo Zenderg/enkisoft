@@ -59,34 +59,41 @@
     }
     .burger {
         display: none;
-        cursor: pointer;
-        .bar {
-            background-color: $white;
-            border-radius: 2px;
-            height: 4px;
-            width: 20px;
-            transition: .3s;
-        }
-        .bar:nth-child(2) {
-            margin: 4px 0;
-        }
-        &.active {
-            .bar:first-child {
-                transform: rotate(45deg) translate(3.5px, 8px);
-            }
-            .bar:nth-child(2) {
-                opacity: 0;
-            }
-            .bar:last-child {
-                transform: rotate(-45deg) translate(3.5px, -8px);
-            }
-        }
     }
+    .mobile-menu {
+        display: none;
+    }
+
 }
 
 @media (max-width: 700px) {
     .header {
         padding: 20px 24px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        &.active{
+            height: calc(100vh - 40px);
+            background-image: url("./components/Hero/assets/bg.svg");
+            background-size: cover;
+            background-position: center;
+            background-color: $accent;
+            display: flex;
+            .mobile-menu{
+                display: block;
+            }
+            .burger {
+                .bar:first-child {
+                    transform: rotate(45deg) translate(3.5px, 8px);
+                }
+                .bar:nth-child(2) {
+                    opacity: 0;
+                }
+                .bar:last-child {
+                    transform: rotate(-45deg) translate(3.5px, -8px);
+                }
+            }
+        }
         .logo-block {
             .logo-main {
                 .logo {
@@ -108,6 +115,45 @@
         }
         .burger {
             display: unset;
+        }
+
+        .burger {
+            display: unset;
+            cursor: pointer;
+            .bar {
+                background-color: $white;
+                border-radius: 2px;
+                height: 4px;
+                width: 20px;
+                transition: .3s;
+            }
+            .bar:nth-child(2) {
+                margin: 4px 0;
+            }
+
+        }
+
+        .mobile-menu{
+            display: none;
+            height: 100%;
+            margin-top: 10px;
+            .menu-link{
+                display: block;
+                margin-top: 24px;
+                font-size: 30px;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 0.065em;
+            }
+            .sub-menu{
+                .sub-menu-item{
+                    letter-spacing: 0.065em;
+                    font-weight: bold;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    font-size: 14px;
+                }
+            }
         }
     }
 }

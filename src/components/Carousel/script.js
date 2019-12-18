@@ -3,6 +3,8 @@
 export function slider() {
     let currentIndex = 0;
     const offset = document.getElementById("carousel-offset");
+    const header = document.querySelector(".header");
+    const subMenuItems = document.querySelectorAll(".sub-menu-item");
 
     const indicators = document.querySelectorAll(".slider>.indicator");
     const blocks = document.querySelectorAll(".blocks-container>.block");
@@ -11,14 +13,17 @@ export function slider() {
 
     const changeCurrentIndex = (newIndex) => {
         currentIndex = newIndex;
-
+        if(header.classList.contains("active")){
+            header.classList.remove("active");
+        }
         offset.style.marginLeft = `calc(${currentIndex} * -100%)`;
         indicators.forEach((item, i) => {
             item.className = i === currentIndex ? "indicator active" : "indicator";
         });
         blocks.forEach((item, i) => {
             item.className = i === currentIndex ? "block active" : "block";
-        })
+        });
+
     };
 
     const slide = (direction) => {
@@ -26,11 +31,12 @@ export function slider() {
         currentIndex = (newIndex < 0) ? blockCount-1 : newIndex;
         changeCurrentIndex(currentIndex);
     };
-
-
-    indicators.forEach((item, i) => {
+    const sliderListener = (item, i) => {
         item.addEventListener("click", () => changeCurrentIndex(i));
-    });
+    };
+
+    subMenuItems.forEach(sliderListener);
+    indicators.forEach(sliderListener);
 
     document.addEventListener("keydown", ({key}) => {
         if(key === "ArrowRight"){

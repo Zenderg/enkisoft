@@ -1,9 +1,13 @@
 window.addEventListener("load", () => {
     const links = document.querySelectorAll(".menu-link");
+    const burger = document.querySelector(".burger");
+    const header = document.querySelector(".header");
 
     links.forEach(item => {
         item.addEventListener("click", () => {
             const href = item.getAttribute("data-href");
+            burger.click();
+
             document.querySelector(`.${ href }`).scrollIntoView({ behavior: "smooth" });
         });
     });
@@ -24,7 +28,6 @@ window.addEventListener("load", () => {
             }
 
             if (index === 0) return item.classList.add("link-active");
-
             return links[index - 1].classList.add("link-active");
         };
 
@@ -33,10 +36,8 @@ window.addEventListener("load", () => {
         iter(links[0]);
     });
 
-    const burger = document.querySelector(".burger");
-
     burger.addEventListener("click", () => {
-        if (burger.classList.contains("active")) return burger.classList.remove("active");
-        else burger.classList.add("active");
+        if (header.classList.contains("active")) return header.classList.remove("active");
+        else header.classList.add("active");
     });
 });
