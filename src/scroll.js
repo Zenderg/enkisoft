@@ -1,5 +1,6 @@
+export let blockScroll = false;
+
 window.addEventListener("load", () => {
-    let blockScroll = false;
     const mobileWidth = 1200;
     const sections = document.querySelectorAll("section");
 
@@ -22,5 +23,7 @@ window.addEventListener("load", () => {
         setTimeout(() => blockScroll = false, 700);
     };
 
-    window.addEventListener("wheel", (e) => scrollInSection(e.deltaY));
+    window.addEventListener("wheel", (e) => {
+        if (e.target.tagName !== "YMAPS") scrollInSection(e.deltaY)
+    });
 });
